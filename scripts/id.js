@@ -1,9 +1,14 @@
 document.body.onload = addElement;
 
 function addElement () {
-    var id = document.createElement("a");
-    id.setAttribute("href","#");
-    var content = document.createTextNode("beer");
-    id.appendChild(content);
-    document.getElementById("drink").appendChild(id);
+    var idJson = {"platform":["github","facebook","twitter"]};
+    for (i in idJson.platform){
+        var idLine = document.createElement("li");
+        var idA = document.createElement("a");
+        idA.setAttribute("href","#");
+        var content = document.createTextNode(idJson.platform[i]);
+        idA.appendChild(content);
+        idLine.appendChild(idA);
+        document.getElementById("drink").appendChild(idLine);
+    }
 }
