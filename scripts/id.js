@@ -1,4 +1,3 @@
-document.body.onload = addElement;
 
 function addElement () {
     var idJson = {"platform":["github","facebook","twitter"]};
@@ -12,3 +11,5 @@ function addElement () {
         document.getElementById("drink").appendChild(idLine);
     }
 }
+
+document.body.onload = addElement;
