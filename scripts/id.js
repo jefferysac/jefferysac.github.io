@@ -1,8 +1,8 @@
 
+var input = require('./id.json');
 function addElement () {
-    var idJson = {"platform":["github","facebook","twitter"]};
     for (i in idJson.platform){
-        var idLine = document.createElement("li");
+       var idLine = document.createElement("li");
         var idA = document.createElement("a");
         idA.setAttribute("href","#");
         var content = document.createTextNode(idJson.platform[i]);
