@@ -15,6 +15,7 @@ function addId(l){
 function title(){
     const element = document.createElement('div');
     element.innerHTML = _.join(['Hello','here'], '');
+    element.classList.add('body');
     return element;
 }
 

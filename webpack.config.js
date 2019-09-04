@@ -1,4 +1,5 @@
-var path =require('path')
+
+const path =require('path')
 
 module.exports = {
     entry:['./src/index.js'],
@@ -7,3 +8,14 @@ module.exports = {
         filename:'app.js'
     }
 }
+module:{
+    rules:[
+        {
+            test:/\.css$/,
+            use:[
+                'style-loader',
+                'css-loader'
+            ] 
+        }
+    ]
+};
