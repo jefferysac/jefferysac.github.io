@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 const idJson = require('./id.json');
+console.log('This is index JS')
 
 function addId(l){
     let idA = document.createElement("a");
