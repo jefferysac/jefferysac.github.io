@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import '../src/style.css';
 
 const idJson = require('./id.json');
 console.log('This is index JS')
