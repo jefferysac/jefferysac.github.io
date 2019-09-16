@@ -28,9 +28,24 @@ module.exports = {
                 use:[
                     'style-loader',
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
                 ] 
+            },
+            {
+                test:[/.(png|jpg|gif|svg)$/],
+                use:[
+                    {
+                        loader:'file-loader',
+                        options:{
+                            outputPath: 'assets/images'
+                        }
+                    }
+                ]
+            },
+            {
+                test:/(fonts|imagess)/,
+                loaders:['url-loader']
             }
         ]
     }
-};
+}

@@ -1,15 +1,14 @@
 import _ from 'lodash';
-import '../src/style.css';
-import '../src/styles/scss/main.scss';
+import '../identity/assets/sass/main.scss';
 
-const idJson = require('./id.json');
-console.log('This is index JS')
+const idJsonData = require('./id.json');
+console.log('This is id JS')
 
-function addId(l){
+function addId(listNum){
     let idA = document.createElement("a");
     idA.setAttribute("href","#");
 
-    let content = document.createTextNode(idJson.platform[l]);
+    let content = document.createTextNode(idJsonData.platform[listNum]);
     idA.appendChild(content);
 
     let idLine = document.createElement("li");
@@ -26,7 +25,7 @@ function title(){
 
 document.body.appendChild(title());
 
-for(let i in idJson.platform){
-        document.body.appendChild(addId(i));
+for(let index in idJsonData.platform){
+        document.body.appendChild(addId(index));
     }   
 

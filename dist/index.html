@@ -1,20 +1,52 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Test webpack html </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">     </head>
-    <body>
-        <h1 id="head1">
-            Welcome,but the party hasn't start yet.
-        </h1>
-        <p>
-            have a sit where you'd like.
-        </p> 
-        <p id="drink">
-            here is my card
-            <button onclick="addId()">one more please</button>
-        </p>
-    <script type="text/javascript" src="index.js"></script></body>
-</html>
 
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+      <title> Test webpack html </title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	<body class="is-loading">
+
+		
+			<div id="wrapper">
+
+				
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="/dist/assets/images/446799d966a2d6a38d75f624e99f57c7.jpg" alt=""></span>
+							<h1>Jane Doe</h1>
+							<p>Senior Psychonautics Engineer</p>
+						</header>
+						
+						<footer>
+							<ul class="icons">
+								<li><a href="#" class="fa-twitter">Twitter</a></li>
+								<li><a href="#" class="fa-instagram">Instagram</a></li>
+								<li><a href="#" class="fa-facebook">Facebook</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Jane Doe</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	<script type="text/javascript" src="index.js"></script></body>
+</html>
