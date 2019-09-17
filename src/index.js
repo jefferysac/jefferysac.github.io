@@ -2,13 +2,14 @@ import _ from 'lodash';
 import '../identity/assets/sass/main.scss';
 
 const idJsonData = require('./id.json');
-console.log('This is id JS')
 
-function addId(listNum){
+function addId(idNode){
     let idA = document.createElement("a");
     idA.setAttribute("href","#");
+    idA.setAttribute("class","fa-"+idNode);
 
-    let content = document.createTextNode(idJsonData.platform[listNum]);
+
+    let content = document.createTextNode(idNode);
     idA.appendChild(content);
 
     let idLine = document.createElement("li");
@@ -18,14 +19,19 @@ function addId(listNum){
 
 function title(){
     const element = document.createElement('h1');
-    element.innerHTML = "This is message";
+    element.innerHTML = "Jefferysac";
     element.classList.add('body');
     return element;
 }
 
-document.body.appendChild(title());
+// let avatarTitle = document.querySelector(".avatar")
+// document.body.appendChild(title());
 
-for(let index in idJsonData.platform){
-        document.body.appendChild(addId(index));
+const idItem = idJsonData.platform;
+const snsIcons = document.querySelector(".icons");
+
+for(let index in idItem){
+    console.log(index);
+    snsIcons.appendChild(addId(idItem[index]));
     }   
 
