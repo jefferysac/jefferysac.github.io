@@ -1,5 +1,3 @@
 {
-    "platform":["github","facebook","twitter","wiki"],
-    "paygroun":2,
-    "test":"string"
+    "platform":["github","facebook","twitter","wiki"]
 }
