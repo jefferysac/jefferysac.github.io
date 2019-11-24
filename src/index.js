@@ -8,7 +8,6 @@ function addId(idNode){
     idA.setAttribute("href","#");
     idA.setAttribute("class","fa-"+idNode);
 
-
     let content = document.createTextNode(idNode);
     idA.appendChild(content);
 
